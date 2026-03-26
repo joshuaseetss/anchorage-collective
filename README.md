@@ -1,16 +1,28 @@
-# React + Vite
+# Anchorage Collective
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**We care for those who care.**
 
-Currently, two official plugins are available:
+A website for Anchorage Collective — providing tailored support for men, professionals, and caregivers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
 
-## React Compiler
+- **Home** — Overview of services and mission
+- **About** — Mission, values, and what we do
+- **Anchored Men** — Mental health support, support circles for young fathers, psychoeducation workshops for expectant fathers, support for men in unsupported pregnancies
+- **Anchored Professionals** — Support circles for social workers and healthcare workers, leadership consultancy, respite retreats
+- **Anchored Caregivers** — Psychoeducation and support circles for caregivers of individuals living with bipolar disorder, schizophrenia, and eating disorders
+- **Blog** — Articles across three categories (Men, Professionals, Caregivers)
+- **Contact Us** — Contact form and information
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite
+- React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
