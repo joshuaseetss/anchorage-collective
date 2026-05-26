@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import AnchoredMen from './pages/AnchoredMen'
 import AnchoredProfessionals from './pages/AnchoredProfessionals'
-import AnchoredCaregivers from './pages/AnchoredCaregivers'
+import AnchoredMentalHealth from './pages/AnchoredMentalHealth'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
@@ -16,7 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/anchored-men" element={<AnchoredMen />} />
         <Route path="/anchored-professionals" element={<AnchoredProfessionals />} />
-        <Route path="/anchored-caregivers" element={<AnchoredCaregivers />} />
+        <Route path="/anchored-mental-health" element={<AnchoredMentalHealth />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:category" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />

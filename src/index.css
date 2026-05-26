@@ -387,7 +387,7 @@ ul { list-style: none; }
 
 .page-hero--men { background: linear-gradient(135deg, #1b3a4b, #2a7a8c); }
 .page-hero--professionals { background: linear-gradient(135deg, #1b3a4b, #3d8b9e); }
-.page-hero--caregivers { background: linear-gradient(135deg, #1b3a4b, #5a8a7a); }
+.page-hero--mental-health { background: linear-gradient(135deg, #1b3a4b, #5a8a7a); }
 
 /* ========================================
    Cards
@@ -730,6 +730,81 @@ ul { list-style: none; }
   outline: none;
   border-color: var(--primary-light);
   box-shadow: 0 0 0 3px rgba(31, 95, 115, 0.15);
+}
+
+.interest-form {
+  margin-top: 1.5rem;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.93rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.checkbox-item:hover {
+  border-color: var(--primary-light);
+  background: var(--bg-accent);
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-top: 0.2rem;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.form-footnote {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.form-error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fdecea;
+  border: 1px solid #f5c2c0;
+  border-radius: var(--radius-sm);
+  color: #9b2c2c;
+  font-size: 0.9rem;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-success {
+  background: var(--bg-accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.form-success h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.form-success p {
+  color: var(--text-light);
+  margin-bottom: 0;
 }
 
 /* ========================================

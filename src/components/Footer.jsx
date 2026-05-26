@@ -14,7 +14,7 @@ export default function Footer() {
           <ul>
             <li><Link to="/anchored-men">Anchored Men</Link></li>
             <li><Link to="/anchored-professionals">Anchored Professionals</Link></li>
-            <li><Link to="/anchored-caregivers">Anchored Caregivers</Link></li>
+            <li><Link to="/anchored-mental-health">Anchored Mental Health</Link></li>
           </ul>
         </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
 
         <div className="footer-col">
           <h4>Connect</h4>
-          <p className="footer-email">hello@anchoragecollective.com</p>
+          <p className="footer-email">anchoragecollective@gmail.com</p>
         </div>
       </div>
 

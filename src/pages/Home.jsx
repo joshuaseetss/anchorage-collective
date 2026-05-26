@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">
-            We provide tailored support for men, professionals, and caregivers — because those who care for others deserve care too.
+            We provide tailored support for men, professionals, and the wider mental health community — because those who care for others deserve care too.
           </p>
           <div className="card-grid">
             <div className="card">
@@ -39,9 +39,9 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-icon">&#128149;</div>
-              <h3>Anchored Caregivers</h3>
-              <p>Psychoeducation and support circles for caregivers of individuals living with mental health conditions.</p>
-              <Link to="/anchored-caregivers" className="card-link">Explore &rarr;</Link>
+              <h3>Anchored Mental Health</h3>
+              <p>Psychoeducation talks, preventive holistic health, and conversations on mental health in relationships.</p>
+              <Link to="/anchored-mental-health" className="card-link">Explore &rarr;</Link>
             </div>
           </div>
         </div>

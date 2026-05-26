@@ -9,7 +9,7 @@ const blogPosts = {
     { title: 'Compassion Fatigue in Social Work', excerpt: 'Understanding the signs of compassion fatigue and what organisations can do to support their teams.', date: 'Coming soon' },
     { title: 'The Case for Respite Retreats', excerpt: 'Why structured time away from work is essential for healthcare professionals — not a luxury, but a necessity.', date: 'Coming soon' },
   ],
-  caregivers: [
+  'mental-health': [
     { title: 'Caring for the Carer', excerpt: 'When you spend all your energy supporting a loved one, who supports you? Practical tips for caregiver self-care.', date: 'Coming soon' },
     { title: 'Understanding Bipolar Disorder as a Caregiver', excerpt: 'A psychoeducational overview for family members and carers navigating bipolar disorder.', date: 'Coming soon' },
   ],
@@ -18,7 +18,7 @@ const blogPosts = {
 const categoryLabels = {
   men: 'Men',
   professionals: 'Professionals',
-  caregivers: 'Caregivers',
+  'mental-health': 'Mental Health',
 }
 
 export default function Blog() {

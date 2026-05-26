@@ -48,7 +48,7 @@ export default function Navbar() {
               <div className="dropdown-menu">
                 <NavLink to="/anchored-men" onClick={closeAll}>Anchored Men</NavLink>
                 <NavLink to="/anchored-professionals" onClick={closeAll}>Anchored Professionals</NavLink>
-                <NavLink to="/anchored-caregivers" onClick={closeAll}>Anchored Caregivers</NavLink>
+                <NavLink to="/anchored-mental-health" onClick={closeAll}>Anchored Mental Health</NavLink>
               </div>
             )}
           </div>
@@ -68,7 +68,7 @@ export default function Navbar() {
               <div className="dropdown-menu">
                 <NavLink to="/blog/men" onClick={closeAll}>Men</NavLink>
                 <NavLink to="/blog/professionals" onClick={closeAll}>Professionals</NavLink>
-                <NavLink to="/blog/caregivers" onClick={closeAll}>Caregivers</NavLink>
+                <NavLink to="/blog/mental-health" onClick={closeAll}>Mental Health</NavLink>
               </div>
             )}
           </div>
