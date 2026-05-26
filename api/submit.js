@@ -1,6 +1,6 @@
 import { Resend } from 'resend'
 
-const TO_EMAIL = 'anchoragecollective@gmail.com'
+const TO_EMAIL = process.env.TO_EMAIL || 'joshu5797@gmail.com'
 const FROM_EMAIL = process.env.FROM_EMAIL || 'Anchorage Collective <onboarding@resend.dev>'
 
 const INTEREST_LABELS = {
