@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import ServiceTable from '../components/ServiceTable'
 import EventCountdown from '../components/EventCountdown'
 
@@ -28,6 +30,14 @@ const services = [
 ]
 
 export default function AnchoredMen() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    const el = document.querySelector(hash)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }, [hash])
+
   return (
     <div className="page service-page">
       <section className="page-hero page-hero--men">
@@ -86,7 +96,7 @@ export default function AnchoredMen() {
 
       <section className="section section-alt">
         <div className="container">
-          <div className="event-card">
+          <div className="event-card" id="upcoming-event">
             <div className="event-card-header">
               <span className="badge badge-event">Upcoming Event</span>
               <h2>Expectant, Aspiring &amp; New Dads Huddle</h2>

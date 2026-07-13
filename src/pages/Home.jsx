@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="page home-page">
       {/* Event announcement bar */}
-      <Link to="/anchored-men" className="announce-bar">
+      <Link to="/anchored-men#upcoming-event" className="announce-bar">
         <span className="announce-dot" aria-hidden="true" />
         <span className="announce-badge">Upcoming Event</span>
         <span className="announce-text">
