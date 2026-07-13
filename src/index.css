@@ -475,6 +475,177 @@ ul { list-style: none; }
 .workshop-banner p { color: var(--text-light); margin-bottom: 0; }
 
 /* ========================================
+   Event card (upcoming event with Luma embed)
+   ======================================== */
+
+.badge-event {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.event-card {
+  padding: 2.5rem;
+  background: var(--bg-accent);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.event-card-header { text-align: center; margin-bottom: 1.25rem; }
+.event-card-header h2 { color: var(--primary); margin: 0.75rem 0 0.4rem; }
+
+.event-meta {
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.event-description {
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+  padding: 0.6rem 0.5rem;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.countdown-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-family: 'Inter', sans-serif;
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.countdown-live {
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.event-card-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.event-embed iframe { display: block; }
+
+.event-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.event-qr img {
+  width: 140px;
+  height: 140px;
+}
+
+.event-qr-caption {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.event-full-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.event-full-link:hover { color: var(--accent); }
+
+@media (max-width: 700px) {
+  .event-card-body { grid-template-columns: 1fr; }
+}
+
+/* Homepage announcement bar */
+.announce-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(90deg, var(--warm), #e8b968);
+  color: var(--primary-dark);
+  text-align: center;
+  font-size: 0.95rem;
+  transition: filter 0.15s;
+}
+
+.announce-bar:hover { filter: brightness(1.05); }
+
+.announce-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-dark);
+  flex-shrink: 0;
+  animation: announce-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes announce-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.announce-badge {
+  background: var(--primary-dark);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.announce-text { font-weight: 700; }
+
+.announce-cta {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .announce-bar { font-size: 0.85rem; padding: 0.75rem 1rem; }
+}
+
+/* ========================================
    Service table (Indigo-style bordered)
    ======================================== */
 

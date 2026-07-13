@@ -1,4 +1,8 @@
 import ServiceTable from '../components/ServiceTable'
+import EventCountdown from '../components/EventCountdown'
+
+const DADS_HUDDLE_URL = 'https://luma.com/860525i3'
+const DADS_HUDDLE_DATE = '2026-09-26T10:00:00+08:00'
 
 const services = [
   {
@@ -14,7 +18,7 @@ const services = [
   {
     name: 'Psychoeducation Workshops for Expectant Fathers',
     details: 'Workshops to prepare expectant fathers for the emotional journey of parenthood.',
-    signUpLink: '#',
+    signUpLink: DADS_HUDDLE_URL,
   },
   {
     name: 'Support for Men in Unsupported Pregnancies',
@@ -82,9 +86,45 @@ export default function AnchoredMen() {
 
       <section className="section section-alt">
         <div className="container">
-          <div className="workshop-banner">
-            <h2>Stay tuned for our upcoming workshops</h2>
-            <p>We&rsquo;re always developing new programmes. Check back soon or get in touch to stay informed.</p>
+          <div className="event-card">
+            <div className="event-card-header">
+              <span className="badge badge-event">Upcoming Event</span>
+              <h2>Expectant, Aspiring &amp; New Dads Huddle</h2>
+              <p className="event-meta">
+                Sat, 26 Sep 2026 &middot; 10:00 AM&ndash;2:00 PM &middot; Sync Space Singapore
+              </p>
+            </div>
+
+            <p className="event-description">
+              &ldquo;Setting Anchor&rdquo; is a half-day gathering for men preparing for fatherhood or
+              navigating the early years &mdash; honest conversations on identity, finances, marriage,
+              and mental health. Come as you are. No fixing. No pressure to have the answers.
+            </p>
+
+            <EventCountdown targetDate={DADS_HUDDLE_DATE} />
+
+            <div className="event-card-body">
+              <div className="event-embed">
+                <iframe
+                  src="https://luma.com/embed/event/860525i3/simple"
+                  width="100%"
+                  height="450"
+                  frameBorder="0"
+                  style={{ border: '1px solid #bfcbda88', borderRadius: '8px' }}
+                  allow="fullscreen; payment"
+                  title="Sign up for the Expectant, Aspiring & New Dads Huddle"
+                />
+              </div>
+
+              <div className="event-qr">
+                <img src="/events/dads-huddle-qr.png" alt="QR code to sign up for the Dads Huddle on Luma" />
+                <span className="event-qr-caption">Scan to sign up</span>
+              </div>
+            </div>
+
+            <a href={DADS_HUDDLE_URL} target="_blank" rel="noopener noreferrer" className="event-full-link">
+              View full event page on Luma &rarr;
+            </a>
           </div>
         </div>
       </section>
