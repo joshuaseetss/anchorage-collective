@@ -87,16 +87,18 @@ export default function Blog() {
                       alt=""
                     />
                   )}
-                  <span className="blog-category">{categoryLabels[post.category]}</span>
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                  {post.publishedAt && (
-                    <span className="blog-date">
-                      {new Date(post.publishedAt).toLocaleDateString(undefined, {
-                        year: 'numeric', month: 'long', day: 'numeric',
-                      })}
-                    </span>
-                  )}
+                  <div className="blog-card-body">
+                    <span className="blog-category">{categoryLabels[post.category]}</span>
+                    <h3>{post.title}</h3>
+                    <p>{post.excerpt}</p>
+                    {post.publishedAt && (
+                      <span className="blog-date">
+                        {new Date(post.publishedAt).toLocaleDateString(undefined, {
+                          year: 'numeric', month: 'long', day: 'numeric',
+                        })}
+                      </span>
+                    )}
+                  </div>
                 </Link>
               ))}
             </div>
