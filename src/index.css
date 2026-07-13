@@ -872,6 +872,53 @@ ul { list-style: none; }
   font-style: italic;
 }
 
+.author-bio {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+}
+
+.author-bio-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.author-bio-info {
+  min-width: 0;
+}
+
+.author-bio-info p {
+  margin-bottom: 0;
+}
+
+.author-bio-name {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.author-bio-name a {
+  color: inherit;
+}
+
+.author-bio-role {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.1rem;
+}
+
+.author-bio-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
 /* ========================================
    Contact
    ======================================== */

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { PortableText } from '@portabletext/react'
 import { sanityClient, urlFor } from '../lib/sanity'
+import AuthorBio from '../components/AuthorBio'
 
 const categoryLabels = {
   men: 'Men',
@@ -114,6 +115,7 @@ export default function BlogPost() {
               alt=""
             />
           )}
+          <AuthorBio />
           <div className="blog-post-body">
             <PortableText value={post.body} components={portableTextComponents} />
           </div>
