@@ -1,19 +1,6 @@
-import { useParams, NavLink } from 'react-router-dom'
-
-const blogPosts = {
-  men: [
-    { title: 'Why Fatherhood Support Matters', excerpt: 'Exploring the emotional landscape of new and expectant fathers, and why dedicated support can make all the difference.', date: 'Coming soon' },
-    { title: 'Breaking the Silence: Men and Mental Health', excerpt: 'A look at why men often struggle to seek help and how we can create safer spaces for conversation.', date: 'Coming soon' },
-  ],
-  professionals: [
-    { title: 'Compassion Fatigue in Social Work', excerpt: 'Understanding the signs of compassion fatigue and what organisations can do to support their teams.', date: 'Coming soon' },
-    { title: 'The Case for Respite Retreats', excerpt: 'Why structured time away from work is essential for healthcare professionals — not a luxury, but a necessity.', date: 'Coming soon' },
-  ],
-  'mental-health': [
-    { title: 'Caring for the Carer', excerpt: 'When you spend all your energy supporting a loved one, who supports you? Practical tips for caregiver self-care.', date: 'Coming soon' },
-    { title: 'Understanding Bipolar Disorder as a Caregiver', excerpt: 'A psychoeducational overview for family members and carers navigating bipolar disorder.', date: 'Coming soon' },
-  ],
-}
+import { useEffect, useState } from 'react'
+import { useParams, NavLink, Link } from 'react-router-dom'
+import { sanityClient, urlFor } from '../lib/sanity'
 
 const categoryLabels = {
   men: 'Men',
@@ -21,9 +8,41 @@ const categoryLabels = {
   'mental-health': 'Mental Health',
 }
 
+const POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
+  title,
+  "slug": slug.current,
+  category,
+  excerpt,
+  mainImage,
+  publishedAt
+}`
+
 export default function Blog() {
   const { category } = useParams()
-  const activeCategory = category && blogPosts[category] ? category : null
+  const activeCategory = category && categoryLabels[category] ? category : null
+
+  const [posts, setPosts] = useState(null)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    let cancelled = false
+    sanityClient.fetch(POSTS_QUERY)
+      .then((data) => {
+        if (!cancelled) setPosts(data)
+      })
+      .catch((err) => {
+        if (!cancelled) setError(err)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const visiblePosts = posts
+    ? activeCategory
+      ? posts.filter((post) => post.category === activeCategory)
+      : posts
+    : null
 
   return (
     <div className="page blog-page">
@@ -51,29 +70,37 @@ export default function Blog() {
             ))}
           </nav>
 
-          <div className="blog-grid">
-            {activeCategory ? (
-              blogPosts[activeCategory].map((post, i) => (
-                <article key={i} className="blog-card">
-                  <span className="blog-category">{categoryLabels[activeCategory]}</span>
+          {error ? (
+            <p className="text-center">Couldn&rsquo;t load posts: {error.message}</p>
+          ) : !visiblePosts ? (
+            <p className="text-center">Loading posts&hellip;</p>
+          ) : visiblePosts.length === 0 ? (
+            <p className="text-center">No posts yet &mdash; check back soon.</p>
+          ) : (
+            <div className="blog-grid">
+              {visiblePosts.map((post) => (
+                <Link key={post.slug} to={`/blog/${post.category}/${post.slug}`} className="blog-card">
+                  {post.mainImage && (
+                    <img
+                      className="blog-card-image"
+                      src={urlFor(post.mainImage).width(640).height(360).fit('crop').url()}
+                      alt=""
+                    />
+                  )}
+                  <span className="blog-category">{categoryLabels[post.category]}</span>
                   <h3>{post.title}</h3>
                   <p>{post.excerpt}</p>
-                  <span className="blog-date">{post.date}</span>
-                </article>
-              ))
-            ) : (
-              Object.entries(blogPosts).map(([cat, posts]) =>
-                posts.map((post, i) => (
-                  <article key={`${cat}-${i}`} className="blog-card">
-                    <span className="blog-category">{categoryLabels[cat]}</span>
-                    <h3>{post.title}</h3>
-                    <p>{post.excerpt}</p>
-                    <span className="blog-date">{post.date}</span>
-                  </article>
-                ))
-              )
-            )}
-          </div>
+                  {post.publishedAt && (
+                    <span className="blog-date">
+                      {new Date(post.publishedAt).toLocaleDateString(undefined, {
+                        year: 'numeric', month: 'long', day: 'numeric',
+                      })}
+                    </span>
+                  )}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>

@@ -6,6 +6,7 @@ import AnchoredMen from './pages/AnchoredMen'
 import AnchoredProfessionals from './pages/AnchoredProfessionals'
 import AnchoredMentalHealth from './pages/AnchoredMentalHealth'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/anchored-mental-health" element={<AnchoredMentalHealth />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:category" element={<Blog />} />
+        <Route path="/blog/:category/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>

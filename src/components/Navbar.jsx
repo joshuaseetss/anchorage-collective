@@ -58,12 +58,14 @@ export default function Navbar() {
             onMouseEnter={() => setBlogDropdown(true)}
             onMouseLeave={() => setBlogDropdown(false)}
           >
-            <button
+            <NavLink
+              to="/blog"
+              end
               className="nav-dropdown-trigger"
-              onClick={() => setBlogDropdown(!blogDropdown)}
+              onClick={closeAll}
             >
               Blog <span className="chevron">&#9662;</span>
-            </button>
+            </NavLink>
             {blogDropdown && (
               <div className="dropdown-menu">
                 <NavLink to="/blog/men" onClick={closeAll}>Men</NavLink>
