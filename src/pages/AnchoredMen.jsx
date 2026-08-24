@@ -114,27 +114,41 @@ export default function AnchoredMen() {
         <div className="container">
           <div className="event-flyer" id="upcoming-event">
             <div className="flyer-hero">
+              <div className="flyer-logo">
+                <img src="/events/mentoo-logo.png" alt="MenToo" />
+                <span>MenToo</span>
+              </div>
+
               <span className="badge badge-event">Upcoming Event</span>
               <p className="flyer-partner">In partnership with MenToo &amp; SGDads Community</p>
               <h2 className="flyer-title">Setting Anchor</h2>
               <p className="flyer-subtitle">A huddle for expectant, aspiring &amp; new dads</p>
 
               <div className="flyer-illustration" aria-hidden="true">
-                <svg viewBox="0 0 200 220" width="120" height="132">
-                  <circle cx="95" cy="115" r="95" fill="var(--accent-light)" opacity="0.4" />
-                  <line x1="95" y1="118" x2="142" y2="62" stroke="var(--primary-dark)" strokeWidth="16" strokeLinecap="round" />
-                  <ellipse cx="150" cy="70" rx="17" ry="21" fill="var(--accent)" />
-                  <circle cx="150" cy="44" r="14" fill="var(--accent)" />
-                  <path d="M58,220 L62,112 Q85,90 108,112 L112,220 Z" fill="var(--primary-dark)" />
-                  <circle cx="85" cy="98" r="22" fill="var(--primary-dark)" />
+                <svg viewBox="-10 -20 240 240" width="130" height="130">
+                  <circle cx="118" cy="68" r="88" fill="var(--bg-accent)" />
+                  <path
+                    d="M96,128 Q112,95 128,62"
+                    stroke="var(--primary-dark)"
+                    strokeWidth="17"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                  <line x1="138" y1="82" x2="120" y2="106" stroke="var(--primary-light)" strokeWidth="11" strokeLinecap="round" />
+                  <line x1="158" y1="82" x2="176" y2="104" stroke="var(--primary-light)" strokeWidth="11" strokeLinecap="round" />
+                  <ellipse cx="148" cy="59" rx="21" ry="25" fill="var(--primary-light)" />
+                  <circle cx="148" cy="24" r="19" fill="var(--primary-light)" />
+                  <path d="M56,210 L61,120 Q84,98 107,120 L112,210 Z" fill="var(--primary-dark)" />
+                  <circle cx="84" cy="102" r="24" fill="var(--primary-dark)" />
                 </svg>
               </div>
             </div>
 
             <div className="flyer-wave" aria-hidden="true">
-              <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
-                <path d="M0,35 C300,85 900,0 1200,45 L1200,100 L0,100 Z" fill="var(--accent-light)" />
-                <path d="M0,60 C300,100 900,25 1200,70 L1200,100 L0,100 Z" fill="var(--primary-dark)" />
+              <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
+                <path d="M0,60 C200,10 400,110 600,70 C800,30 1000,100 1200,55 L1200,220 L0,220 Z" fill="var(--accent-light)" />
+                <path d="M0,120 C200,170 400,90 600,130 C800,165 1000,95 1200,125 L1200,220 L0,220 Z" fill="var(--primary-light)" />
+                <path d="M0,175 C200,145 400,205 600,180 C800,155 1000,205 1200,180 L1200,220 L0,220 Z" fill="var(--primary-dark)" />
               </svg>
             </div>
 

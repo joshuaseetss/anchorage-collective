@@ -491,9 +491,33 @@ ul { list-style: none; }
 }
 
 .flyer-hero {
+  position: relative;
   background: var(--cream);
   padding: 2.5rem 2rem 0;
   text-align: center;
+}
+
+.flyer-logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.flyer-logo img {
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+}
+
+.flyer-logo span {
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .flyer-partner {
@@ -532,7 +556,11 @@ ul { list-style: none; }
 .flyer-wave svg {
   display: block;
   width: 100%;
-  height: 70px;
+  height: 150px;
+}
+
+@media (max-width: 600px) {
+  .flyer-wave svg { height: 90px; }
 }
 
 .flyer-body {
