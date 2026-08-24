@@ -144,9 +144,9 @@ export default function AnchoredMen() {
             </div>
 
             <div className="flyer-wave" aria-hidden="true">
-              <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-                <path d="M0,20 C300,45 900,0 1200,25 L1200,60 L0,60 Z" fill="var(--accent-light)" />
-                <path d="M0,38 C300,58 900,18 1200,42 L1200,60 L0,60 Z" fill="var(--primary-dark)" />
+              <svg viewBox="0 0 1200 130" preserveAspectRatio="none">
+                <path d="M0,30 C300,75 900,10 1200,50 L1200,130 L0,130 Z" fill="var(--bg-accent)" />
+                <path d="M0,65 C300,120 900,45 1200,95 L1200,130 L0,130 Z" fill="var(--accent)" />
               </svg>
             </div>
 

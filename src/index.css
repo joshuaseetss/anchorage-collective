@@ -490,6 +490,7 @@ ul { list-style: none; }
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
+  scroll-margin-top: 88px;
 }
 
 .flyer-hero {
@@ -502,15 +503,19 @@ ul { list-style: none; }
 .flyer-top-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.6rem;
   margin-bottom: 0.85rem;
 }
 
 .flyer-logo {
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
   border-radius: 5px;
+  padding: 3px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  object-fit: contain;
 }
 
 .flyer-partner {
@@ -545,12 +550,13 @@ ul { list-style: none; }
 .flyer-wave {
   line-height: 0;
   background: var(--cream);
+  margin-top: -0.5rem;
 }
 
 .flyer-wave svg {
   display: block;
   width: 100%;
-  height: 28px;
+  height: 72px;
 }
 
 .flyer-body {
