@@ -475,7 +475,7 @@ ul { list-style: none; }
 .workshop-banner p { color: var(--text-light); margin-bottom: 0; }
 
 /* ========================================
-   Event card (upcoming event with Luma embed)
+   Event flyer (upcoming event, styled like the print poster)
    ======================================== */
 
 .badge-event {
@@ -483,27 +483,228 @@ ul { list-style: none; }
   color: var(--white);
 }
 
-.event-card {
-  padding: 2.5rem;
-  background: var(--bg-accent);
+.event-flyer {
   border-radius: var(--radius);
+  overflow: hidden;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
 }
 
-.event-card-header { text-align: center; margin-bottom: 1.25rem; }
-.event-card-header h2 { color: var(--primary); margin: 0.75rem 0 0.4rem; }
-
-.event-meta {
-  color: var(--text-light);
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.event-description {
-  max-width: 640px;
-  margin: 0 auto 1.5rem;
+.flyer-hero {
+  background: var(--cream);
+  padding: 2.5rem 2rem 0;
   text-align: center;
+}
+
+.flyer-partner {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin: 0.9rem 0 0;
+}
+
+.flyer-title {
+  color: var(--primary-dark);
+  font-size: 3rem;
+  margin: 0.3rem 0 0.3rem;
+}
+
+.flyer-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   color: var(--text-light);
+  font-size: 1.15rem;
+}
+
+.flyer-illustration {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0;
+}
+
+.flyer-wave {
+  line-height: 0;
+  background: var(--cream);
+}
+
+.flyer-wave svg {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+
+.flyer-body {
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 0 2rem 2.5rem;
+  text-align: center;
+}
+
+.flyer-date {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.flyer-time {
+  color: var(--accent-light);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.flyer-venue {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.flyer-description {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.flyer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 340px;
+  margin: 1.75rem auto;
+}
+
+.flyer-sessions {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 620px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flyer-sessions li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.75rem;
+}
+
+.flyer-session-num {
+  font-weight: 700;
+  color: var(--accent-light);
+  opacity: 0.7;
+}
+
+.flyer-sessions h3 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--white);
+  font-size: 1.2rem;
+  margin: 0 0 0.15rem;
+}
+
+.flyer-session-time {
+  display: block;
+  color: var(--accent-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.flyer-sessions p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+}
+
+.flyer-note {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 1.75rem 0 0;
+}
+
+.flyer-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.flyer-register-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.flyer-qr {
+  width: 140px;
+  height: 140px;
+  padding: 10px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+}
+
+.flyer-register-btn {
+  display: block;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.flyer-register-btn:hover { background: var(--accent-light); color: var(--primary-dark); }
+
+.flyer-url {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+.flyer-tagline {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 2rem 0 0;
+}
+
+.flyer-sponsor {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 1.5rem auto 0;
+  padding: 0.6rem 1.75rem;
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+}
+
+.flyer-sponsor span {
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.flyer-sponsor strong { color: var(--white); }
+
+.flyer-footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .flyer-title { font-size: 2.2rem; }
+  .flyer-sessions li { grid-template-columns: 2rem 1fr; }
 }
 
 .countdown {
@@ -543,79 +744,6 @@ ul { list-style: none; }
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 2rem;
-}
-
-.event-card-body {
-  display: grid;
-  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.event-poster {
-  display: flex;
-  justify-content: center;
-}
-
-.event-poster img {
-  width: 100%;
-  max-width: 280px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 12px 32px -12px rgba(15, 45, 60, 0.35);
-}
-
-.event-expect h3 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.event-expect-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.event-expect-list li {
-  padding: 0.9rem 1.1rem;
-  background: var(--white);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  color: var(--text-light);
-}
-
-.event-expect-list strong { color: var(--primary-dark); }
-
-.event-tagline {
-  font-style: italic;
-  color: var(--text-light);
-  margin: 1.5rem 0 0;
-}
-
-.event-full-link {
-  display: block;
-  width: fit-content;
-  margin: 1.25rem 0 0;
-  padding: 0.75rem 2rem;
-  border-radius: var(--radius-sm);
-  background: var(--primary);
-  color: var(--white);
-  font-weight: 600;
-  text-align: center;
-  transition: background 0.2s ease;
-}
-
-.event-full-link:hover { background: var(--accent); color: var(--white); }
-
-@media (max-width: 700px) {
-  .event-card-body { grid-template-columns: 1fr; }
-  .event-tagline, .event-full-link { text-align: center; }
-  .event-full-link { margin-left: auto; margin-right: auto; }
 }
 
 /* Homepage announcement bar */
