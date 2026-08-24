@@ -504,7 +504,7 @@ ul { list-style: none; }
 
 .flyer-top-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.6rem;
   margin-bottom: 0.85rem;
