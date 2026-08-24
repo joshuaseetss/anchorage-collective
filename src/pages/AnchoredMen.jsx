@@ -109,6 +109,10 @@ export default function AnchoredMen() {
             <EventCountdown targetDate={DADS_HUDDLE_DATE} />
 
             <div className="event-card-body">
+              <div className="event-poster">
+                <img src="/events/setting-anchor-poster.png" alt="Setting Anchor event poster with full schedule" />
+              </div>
+
               <div className="event-expect">
                 <h3>What to Expect</h3>
                 <ul className="event-expect-list">
@@ -125,14 +129,14 @@ export default function AnchoredMen() {
                     finding hope when plans fail.
                   </li>
                 </ul>
+
+                <p className="event-tagline">Come la. Leave a little more anchored.</p>
+
+                <a href={DADS_HUDDLE_URL} target="_blank" rel="noopener noreferrer" className="event-full-link">
+                  Register Now &rarr;
+                </a>
               </div>
             </div>
-
-            <p className="event-tagline">Come la. Leave a little more anchored.</p>
-
-            <a href={DADS_HUDDLE_URL} target="_blank" rel="noopener noreferrer" className="event-full-link">
-              Register Now &rarr;
-            </a>
           </div>
         </div>
       </section>
