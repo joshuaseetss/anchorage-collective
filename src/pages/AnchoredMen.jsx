@@ -119,9 +119,41 @@ export default function AnchoredMen() {
                 <span className="badge badge-event">Upcoming Event</span>
               </div>
 
-              <div className="flyer-illustration" aria-hidden="true">
-                <svg viewBox="-10 -20 240 240" width="56" height="56">
-                  <circle cx="118" cy="68" r="88" fill="var(--bg-accent)" />
+              <h2 className="flyer-title">Setting Anchor</h2>
+              <p className="flyer-subtitle">A huddle for expectant, aspiring &amp; new dads</p>
+              <p className="flyer-partner">In partnership with MenToo &amp; SGDads Community</p>
+            </div>
+
+            <div className="flyer-wave" aria-hidden="true">
+              <div className="flyer-sun">
+                <svg viewBox="-10 -20 240 240" width="150" height="150">
+                  <circle cx="118" cy="55" r="70" fill="#f7a95c" opacity="0.6" />
+                </svg>
+              </div>
+
+              <svg className="flyer-wave-svg" viewBox="0 0 1200 200" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="flyerWaveTopGradient" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stopColor="var(--bg-accent)" />
+                    <stop offset="100%" stopColor="var(--accent-light)" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M0,55 C200,25 400,25 600,55 C800,85 1000,85 1200,55 L1200,200 L0,200 Z"
+                  fill="url(#flyerWaveTopGradient)"
+                />
+                <path
+                  d="M0,105 C200,75 400,75 600,105 C800,135 1000,135 1200,105 L1200,200 L0,200 Z"
+                  fill="var(--teal-deep)"
+                />
+                <path
+                  d="M0,155 C200,125 400,125 600,155 C800,185 1000,185 1200,155 L1200,200 L0,200 Z"
+                  fill="var(--primary-dark)"
+                />
+              </svg>
+
+              <div className="flyer-illustration">
+                <svg viewBox="-10 -20 240 240" width="150" height="150">
                   <path
                     d="M96,128 Q112,95 128,62"
                     stroke="var(--primary-dark)"
@@ -137,17 +169,6 @@ export default function AnchoredMen() {
                   <circle cx="84" cy="102" r="24" fill="var(--primary-dark)" />
                 </svg>
               </div>
-
-              <h2 className="flyer-title">Setting Anchor</h2>
-              <p className="flyer-subtitle">A huddle for expectant, aspiring &amp; new dads</p>
-              <p className="flyer-partner">In partnership with MenToo &amp; SGDads Community</p>
-            </div>
-
-            <div className="flyer-wave" aria-hidden="true">
-              <svg viewBox="0 0 1200 130" preserveAspectRatio="none">
-                <path d="M0,30 C300,75 900,10 1200,50 L1200,130 L0,130 Z" fill="var(--bg-accent)" />
-                <path d="M0,65 C300,120 900,45 1200,95 L1200,130 L0,130 Z" fill="var(--accent)" />
-              </svg>
             </div>
 
             <div className="flyer-body">

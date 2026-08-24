@@ -9,6 +9,8 @@
   --primary-dark: #1b3a4b;
   --accent: #6bb8c9;
   --accent-light: #a5d5d8;
+  --sage: #5a8a7a;
+  --teal-deep: #2a7a8c;
   --warm: #d4a24e;
   --bg: #f5f2ed;
   --bg-alt: #eae6df;
@@ -509,10 +511,10 @@ ul { list-style: none; }
 }
 
 .flyer-logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 5px;
-  padding: 3px;
+  width: 72px;
+  height: 72px;
+  border-radius: 9px;
+  padding: 5px;
   background: var(--white);
   border: 1px solid var(--border);
   object-fit: contain;
@@ -541,13 +543,30 @@ ul { list-style: none; }
   margin-top: 0.1rem;
 }
 
+.flyer-sun {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
 .flyer-illustration {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.25rem;
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+  z-index: 2;
+}
+
+.flyer-wave-svg {
+  position: relative;
+  z-index: 1;
 }
 
 .flyer-wave {
+  position: relative;
   line-height: 0;
   background: var(--cream);
   margin-top: -0.5rem;
@@ -556,7 +575,7 @@ ul { list-style: none; }
 .flyer-wave svg {
   display: block;
   width: 100%;
-  height: 72px;
+  height: 120px;
 }
 
 .flyer-body {
