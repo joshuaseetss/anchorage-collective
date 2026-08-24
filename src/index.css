@@ -570,6 +570,7 @@ ul { list-style: none; }
   line-height: 0;
   background: var(--cream);
   margin-top: -0.5rem;
+  margin-bottom: -1px;
 }
 
 .flyer-wave svg {
