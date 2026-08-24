@@ -114,18 +114,13 @@ export default function AnchoredMen() {
         <div className="container">
           <div className="event-flyer" id="upcoming-event">
             <div className="flyer-hero">
-              <div className="flyer-logo">
-                <img src="/events/mentoo-logo.png" alt="MenToo" />
-                <span>MenToo</span>
+              <div className="flyer-top-row">
+                <img src="/events/mentoo-logo.png" alt="MenToo" className="flyer-logo" />
+                <span className="badge badge-event">Upcoming Event</span>
               </div>
 
-              <span className="badge badge-event">Upcoming Event</span>
-              <p className="flyer-partner">In partnership with MenToo &amp; SGDads Community</p>
-              <h2 className="flyer-title">Setting Anchor</h2>
-              <p className="flyer-subtitle">A huddle for expectant, aspiring &amp; new dads</p>
-
               <div className="flyer-illustration" aria-hidden="true">
-                <svg viewBox="-10 -20 240 240" width="130" height="130">
+                <svg viewBox="-10 -20 240 240" width="56" height="56">
                   <circle cx="118" cy="68" r="88" fill="var(--bg-accent)" />
                   <path
                     d="M96,128 Q112,95 128,62"
@@ -142,13 +137,16 @@ export default function AnchoredMen() {
                   <circle cx="84" cy="102" r="24" fill="var(--primary-dark)" />
                 </svg>
               </div>
+
+              <h2 className="flyer-title">Setting Anchor</h2>
+              <p className="flyer-subtitle">A huddle for expectant, aspiring &amp; new dads</p>
+              <p className="flyer-partner">In partnership with MenToo &amp; SGDads Community</p>
             </div>
 
             <div className="flyer-wave" aria-hidden="true">
-              <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
-                <path d="M0,60 C200,10 400,110 600,70 C800,30 1000,100 1200,55 L1200,220 L0,220 Z" fill="var(--accent-light)" />
-                <path d="M0,120 C200,170 400,90 600,130 C800,165 1000,95 1200,125 L1200,220 L0,220 Z" fill="var(--primary-light)" />
-                <path d="M0,175 C200,145 400,205 600,180 C800,155 1000,205 1200,180 L1200,220 L0,220 Z" fill="var(--primary-dark)" />
+              <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+                <path d="M0,20 C300,45 900,0 1200,25 L1200,60 L0,60 Z" fill="var(--accent-light)" />
+                <path d="M0,38 C300,58 900,18 1200,42 L1200,60 L0,60 Z" fill="var(--primary-dark)" />
               </svg>
             </div>
 
@@ -186,12 +184,14 @@ export default function AnchoredMen() {
               <p className="flyer-note">Each session: personal sharing followed by community discussion</p>
 
               <div className="flyer-register">
-                <span className="flyer-register-label">Scan to Register</span>
                 <img src="/events/qr-register.png" alt="QR code to register for Setting Anchor" className="flyer-qr" />
-                <a href={DADS_HUDDLE_URL} target="_blank" rel="noopener noreferrer" className="flyer-register-btn">
-                  Register Now &rarr;
-                </a>
-                <span className="flyer-url">forms.gle/JaDVXyEkpJwxSTV9A</span>
+                <div className="flyer-register-info">
+                  <span className="flyer-register-label">Scan to register</span>
+                  <a href={DADS_HUDDLE_URL} target="_blank" rel="noopener noreferrer" className="flyer-register-btn">
+                    Register Now &rarr;
+                  </a>
+                  <span className="flyer-url">forms.gle/JaDVXyEkpJwxSTV9A</span>
+                </div>
               </div>
 
               <p className="flyer-tagline">Come la. Leave a little more anchored.</p>
