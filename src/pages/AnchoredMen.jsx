@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import ServiceTable from '../components/ServiceTable'
 import EventCountdown from '../components/EventCountdown'
 
-const DADS_HUDDLE_URL = 'https://luma.com/860525i3'
+const DADS_HUDDLE_URL = 'https://forms.gle/JaDVXyEkpJwxSTV9A'
 const DADS_HUDDLE_DATE = '2026-09-26T10:00:00+08:00'
 
 const services = [
@@ -16,11 +16,6 @@ const services = [
     name: 'Support Circles for Young Fathers',
     details: 'A safe space for young fathers to connect, share experiences, and build resilience.',
     signUpLink: '#',
-  },
-  {
-    name: 'Psychoeducation Workshops for Expectant Fathers',
-    details: 'Workshops to prepare expectant fathers for the emotional journey of parenthood.',
-    signUpLink: DADS_HUDDLE_URL,
   },
   {
     name: 'Support for Men in Unsupported Pregnancies',
@@ -99,41 +94,44 @@ export default function AnchoredMen() {
           <div className="event-card" id="upcoming-event">
             <div className="event-card-header">
               <span className="badge badge-event">Upcoming Event</span>
-              <h2>Expectant, Aspiring &amp; New Dads Huddle</h2>
+              <h2>Setting Anchor</h2>
               <p className="event-meta">
-                Sat, 26 Sep 2026 &middot; 10:00 AM&ndash;2:00 PM &middot; Sync Space Singapore
+                Sat, 26 Sep 2026 &middot; 10:00 AM&ndash;12:45 PM &middot; Murdoch University (Level 2, Connexion @ Odeon 333, Singapore)
               </p>
             </div>
 
             <p className="event-description">
-              &ldquo;Setting Anchor&rdquo; is a half-day gathering for men preparing for fatherhood or
-              navigating the early years &mdash; honest conversations on identity, finances, marriage,
-              and mental health. Come as you are. No fixing. No pressure to have the answers.
+              Very few talk about the real shift men face &mdash; the pressure to provide, marriage changes,
+              and the silent emotional load. Setting Anchor is your space to talk about what actually
+              happens to us.
             </p>
 
             <EventCountdown targetDate={DADS_HUDDLE_DATE} />
 
             <div className="event-card-body">
-              <div className="event-embed">
-                <iframe
-                  src="https://luma.com/embed/event/860525i3/simple"
-                  width="100%"
-                  height="450"
-                  frameBorder="0"
-                  style={{ border: '1px solid #bfcbda88', borderRadius: '8px' }}
-                  allow="fullscreen; payment"
-                  title="Sign up for the Expectant, Aspiring & New Dads Huddle"
-                />
-              </div>
-
-              <div className="event-qr">
-                <img src="/events/dads-huddle-qr.png" alt="QR code to sign up for the Dads Huddle on Luma" />
-                <span className="event-qr-caption">Scan to sign up</span>
+              <div className="event-expect">
+                <h3>What to Expect</h3>
+                <ul className="event-expect-list">
+                  <li>
+                    <strong>What I Wish I Knew:</strong> Real talk from a seasoned dad on the unexpected
+                    challenges.
+                  </li>
+                  <li>
+                    <strong>What I Wish My Father Did:</strong> Reflecting on the legacy we inherited
+                    &mdash; and the dads we want to be.
+                  </li>
+                  <li>
+                    <strong>Through the Valley:</strong> Navigating mental health, marriage strains, and
+                    finding hope when plans fail.
+                  </li>
+                </ul>
               </div>
             </div>
 
+            <p className="event-tagline">Come la. Leave a little more anchored.</p>
+
             <a href={DADS_HUDDLE_URL} target="_blank" rel="noopener noreferrer" className="event-full-link">
-              View full event page on Luma &rarr;
+              Register Now &rarr;
             </a>
           </div>
         </div>

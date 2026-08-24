@@ -9,7 +9,7 @@ export default function Home() {
         <span className="announce-dot" aria-hidden="true" />
         <span className="announce-badge">Upcoming Event</span>
         <span className="announce-text">
-          Expectant, Aspiring &amp; New Dads Huddle &mdash; Sat, 26 Sep 2026, 10am&ndash;2pm
+          Setting Anchor &mdash; Sat, 26 Sep 2026, 10am&ndash;12:45pm
         </span>
         <span className="announce-cta">Sign Up <span aria-hidden="true">&rarr;</span></span>
       </Link>
