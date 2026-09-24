@@ -15,7 +15,7 @@ export default function About() {
         <div className="container content-narrow">
           <h2>Our Mission</h2>
           <p>
-            Anchorage Collective was founded on a simple but powerful belief: <strong>we care for those who care</strong>.
+            Anchorage Asia Ltd. was founded on a simple but powerful belief: <strong>we care for those who care</strong>.
             Whether you&rsquo;re a father navigating new responsibilities, a social worker carrying the weight of others&rsquo;
             stories, or a caregiver supporting a loved one through mental illness — you deserve a safe harbour.
           </p>

@@ -79,7 +79,7 @@ export default function AnchoredMen() {
         <div className="container content-narrow">
           <h2>Our Services</h2>
           <p>
-            Anchorage Collective provides tailored programmes to support men at
+            Anchorage Asia Ltd. provides tailored programmes to support men at
             every stage. From psychoeducation workshops for expectant fathers to
             support circles for young dads, we create safe spaces for honest
             conversation and growth.

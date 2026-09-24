@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-col">
-          <h3>Anchorage Collective</h3>
+          <h3>Anchorage Asia Ltd.</h3>
           <p>We care for those who care.</p>
         </div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Anchorage Collective. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Anchorage Asia Ltd. All rights reserved.</p>
       </div>
     </footer>
   )

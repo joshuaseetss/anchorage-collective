@@ -17,8 +17,8 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="container hero-content">
-          <img src={logo} alt="Anchorage Collective" className="hero-logo" />
-          <h1>Anchorage Collective</h1>
+          <img src={logo} alt="Anchorage Asia Ltd." className="hero-logo" />
+          <h1>Anchorage Asia Ltd.</h1>
           <p className="tagline">We care for those who care</p>
           <div className="hero-actions">
             <Link to="/about" className="btn btn-primary">Learn More</Link>

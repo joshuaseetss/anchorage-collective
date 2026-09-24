@@ -5,7 +5,7 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'Anchorage Collective',
+  title: 'Anchorage Asia Ltd.',
 
   projectId: 'rcvf7b8x',
   dataset: 'production',

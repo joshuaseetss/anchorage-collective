@@ -1,8 +1,8 @@
-# Anchorage Collective
+# Anchorage Asia Ltd.
 
 **We care for those who care.**
 
-A website for Anchorage Collective — providing tailored support for men, professionals, and caregivers.
+A website for Anchorage Asia Ltd. — providing tailored support for men, professionals, and caregivers.
 
 ## Pages
 

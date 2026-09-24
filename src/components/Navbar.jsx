@@ -17,8 +17,8 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar-inner container">
         <Link to="/" className="navbar-brand" onClick={closeAll}>
-          <img src={logo} alt="Anchorage Collective" className="navbar-logo" />
-          <span className="brand-text">Anchorage Collective</span>
+          <img src={logo} alt="Anchorage Asia Ltd." className="navbar-logo" />
+          <span className="brand-text">Anchorage Asia Ltd.</span>
         </Link>
 
         <button

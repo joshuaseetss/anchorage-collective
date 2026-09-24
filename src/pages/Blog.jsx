@@ -49,7 +49,7 @@ export default function Blog() {
       <section className="page-hero">
         <div className="container">
           <h1>Blog</h1>
-          <p className="page-subtitle">Insights, stories, and resources from Anchorage Collective.</p>
+          <p className="page-subtitle">Insights, stories, and resources from Anchorage Asia Ltd.</p>
         </div>
       </section>
 
