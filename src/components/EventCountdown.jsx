@@ -11,16 +11,24 @@ function getTimeLeft(targetDate) {
   }
 }
 
-export default function EventCountdown({ targetDate }) {
+function isPast(date) {
+  return Boolean(date) && Date.now() > new Date(date).getTime()
+}
+
+export default function EventCountdown({ targetDate, endDate }) {
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(targetDate))
+  const [ended, setEnded] = useState(() => isPast(endDate))
 
   useEffect(() => {
-    const timer = setInterval(() => setTimeLeft(getTimeLeft(targetDate)), 1000)
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeLeft(targetDate))
+      setEnded(isPast(endDate))
+    }, 1000)
     return () => clearInterval(timer)
-  }, [targetDate])
+  }, [targetDate, endDate])
 
   if (!timeLeft) {
-    return <p className="countdown-live">Happening now!</p>
+    return <p className="countdown-live">{ended ? 'This event has ended' : 'Happening now!'}</p>
   }
 
   const units = [
