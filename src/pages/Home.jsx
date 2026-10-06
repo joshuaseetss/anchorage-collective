@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.jpeg'
+import { EVENT, isEventOver } from '../data/event'
 
 export default function Home() {
   return (
     <div className="page home-page">
       {/* Event announcement bar */}
-      <Link to="/anchored-men#upcoming-event" className="announce-bar">
-        <span className="announce-dot" aria-hidden="true" />
-        <span className="announce-badge">Upcoming Event</span>
-        <span className="announce-text">
-          Setting Anchor &mdash; Sat, 26 Sep 2026, 10am&ndash;12:45pm
-        </span>
-        <span className="announce-cta">Sign Up <span aria-hidden="true">&rarr;</span></span>
-      </Link>
+      {!isEventOver() && (
+        <Link to="/anchored-men#upcoming-event" className="announce-bar">
+          <span className="announce-dot" aria-hidden="true" />
+          <span className="announce-badge">Upcoming Event</span>
+          <span className="announce-text">
+            {EVENT.name} &mdash; {EVENT.label}
+          </span>
+          <span className="announce-cta">Sign Up <span aria-hidden="true">&rarr;</span></span>
+        </Link>
+      )}
 
       {/* Hero */}
       <section className="hero">
