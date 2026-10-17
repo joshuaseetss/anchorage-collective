@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ServiceTable from "../components/ServiceTable";
 import EventCountdown from "../components/EventCountdown";
+import { EVENT } from '../data/event'
 
 const DADS_HUDDLE_URL = "https://forms.gle/JaDVXyEkpJwxSTV9A";
-const DADS_HUDDLE_DATE = "2026-09-26T10:00:00+08:00";
 
 const sessions = [
   {
@@ -251,7 +251,7 @@ export default function AnchoredMen() {
                 to us.
               </p>
 
-              <EventCountdown targetDate={DADS_HUDDLE_DATE} />
+              <EventCountdown targetDate={EVENT.start} endDate={EVENT.end} />
 
               <hr className="flyer-divider" />
 
